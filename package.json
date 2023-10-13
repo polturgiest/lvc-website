@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "gh": "ng build --configuration production --output-path docs --base-href /lvc-website"
+    "gh": "ng build --configuration production --output-path docs --base-href /lvc-website/"
   },
   "private": true,
   "dependencies": {
