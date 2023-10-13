@@ -18,4 +18,9 @@
       min-height: 150px;
   }
 
+  .carousel-caption {
+    top: 0;
+    bottom: auto;
+}
+
 @import '~@angular/cdk/overlay-prebuilt.css';
