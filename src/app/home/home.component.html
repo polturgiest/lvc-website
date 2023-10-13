@@ -1,55 +1,60 @@
-<p>home works!</p>
-
-<div>
-    The name is {{Name1}}<br>
-    The first Topic is {{appList[0] | lowercase}}<br>
-    The second Topic is {{appList[1] | uppercase}}<br>
-    The third Topic is {{appList[2]| lowercase}}<br>
-
-    The first Topic is {{appList[0] | slice:0:5}}<br>
-    The second Topic is {{appList[1] | slice:0:4}}<br>
-    The third Topic is {{appList[2]| slice:0:6}}<br>
-</div>
-
-<div [ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}">
-    style using ngStyle
-</div>
-
-<h2 [ngClass]="{available:isAvailable, unavailable:!isAvailable}">
-    Just For Testing
-</h2>
-
 <section>
-    <div class="card-group">
 
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">MEAN</h5>
-                <p class="card-text">MEAN Course</p>
-                <a routerLink="../courses/mean" class="btn btn-primary">Go somewhere</a>
+    <div class="row row-cols-1 row-cols-md-5 g-4 mt-5 mb-5">
+        <div class="col">
+            <div class="card">
+                <img src="./assets/images/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">MEAN</h5>
+                    <p class="card-text">
+                        This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.
+                    </p>
+                    <a routerLink="../courses/mean">
+                        <button mat-raised-button color="primary" matTooltip="This is MEVN" matBadge="10">
+                            MEAN Course
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">MERN</h5>
-                <p class="card-text">MERN Course</p>
-                <a routerLink="../courses/mern" class="btn btn-primary">Go somewhere</a>
+        <div class="col">
+            <div class="card">
+                <img src="./assets/images/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">MERN</h5>
+                    <p class="card-text">
+                        This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.
+                    </p>
+                    <a routerLink="../courses/mern">
+                        <button mat-raised-button color="primary" matTooltip="This is MERN" matBadge="3">
+                            MERN Course
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">MEVN</h5>
-                <p class="card-text">MEVN Course</p>
-                <a routerLink="../courses/mevn">
-                <button mat-raised-button color="primary" matTooltip="This is MEVN" matBadge="10">
-                    Go somewhere
-                </button>
-                </a>
+        <div class="col">
+            <div class="card">
+                <img src="./assets/images/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">MEVN</h5>
+                    <p class="card-text">
+                        This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.
+                    </p>
+                    <a routerLink="../courses/mevn">
+                        <button mat-raised-button color="primary" matTooltip="This is MEVN" matBadge="3">
+                            MEVN Course
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
 
     </div>
-    
+
 </section>

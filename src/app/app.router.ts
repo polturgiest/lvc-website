@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from "@angular/router";
 import { AboutComponent } from "./about/about.component";
-import { ServicesComponent } from "./services/services.component";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { HomeComponent } from './home/home.component';
@@ -14,6 +13,7 @@ import { DotnetComponent } from './courses/dotnet/dotnet.component';
 import { MeanComponent } from './courses/mean/mean.component';
 import { MernComponent } from './courses/mern/mern.component';
 import { MevnComponent } from './courses/mevn/mevn.component';
+import { UsersComponent } from './users/users.component';
 
 export const router: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -24,11 +24,11 @@ export const router: Routes = [
     { path: 'courses/mean', component: MeanComponent },
     { path: 'courses/mern', component: MernComponent },
     { path: 'courses/mevn', component: MevnComponent },
+    { path: 'users', component: UsersComponent },
     { path: 'registration', component: RegistrationComponent },
     { path: 'gallery', component: GalleryComponent },
     { path: 'contactus', component: ContactUsComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'services', component: ServicesComponent },
   ];
   
 export const routes = RouterModule.forRoot(router);

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routes } from './app.router';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
 import { CoursesComponent } from './courses/courses.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
@@ -19,12 +18,13 @@ import { ViewComponent } from './gallery/view/view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { NgIf } from '@angular/common';
+import { UsersComponent } from './users/users.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ServicesComponent,
     CoursesComponent,
     RegistrationComponent,
     HomeComponent,
@@ -35,7 +35,8 @@ import { NgIf } from '@angular/common';
     MevnComponent,
     JavaComponent,
     DotnetComponent,
-    ViewComponent
+    ViewComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +45,8 @@ import { NgIf } from '@angular/common';
     routes,
     BrowserAnimationsModule,
     MaterialModule,
-    NgIf
+    NgIf,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
