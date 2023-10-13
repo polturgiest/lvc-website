@@ -1,0 +1,85 @@
+<div class="card mt-3">
+    <div class="card-body">
+      <h3>Reactive Form</h3>
+      <form [formGroup]="angForm" novalidate>
+        <div class="form-group mt-2">
+          <label>Name:</label>
+          <input class="form-control" formControlName="name" type="text">
+        </div>
+        <div
+          *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="angForm.controls['name'].errors">
+            Name is required.
+          </div>
+        </div>
+        <div class="form-group mt-2">
+          <label>Address:</label>
+          <input class="form-control" formControlName="address" type="text">
+        </div>
+        <div
+          *ngIf="angForm.controls['address'].invalid && (angForm.controls['address'].dirty || angForm.controls['address'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="angForm.controls['address'].errors">
+            Address is required.
+          </div>
+        </div>
+        <button type="submit" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success mt-2">
+          Save
+        </button>
+      </form>
+      <br />
+      <p>Form value: {{ angForm.value | json }}</p>
+      <p>Form status: {{ angForm.status | json }}</p>
+    </div>
+  </div>
+  
+  <!-- <div class="card mt-3">
+    <div class="card-body">
+      <h3>Template Driven Form</h3>
+      <form #myform = "ngForm">
+        {{ myform.value | json }}
+        <br>
+        <br>
+        Name: <input type="text" name = 'name' ngModel>
+        Roll: <input type="text" name = 'roll' ngModel>
+        </form>
+    </div>
+  </div> -->
+  
+  <!-- <div class="card mt-3">
+    <div class="card-body">
+      <h3>Registration Form</h3>
+      <div class="row mt-1 g-3 align-items-center">
+        <div class="col-1">
+          <label for="name-id" class="col-form-label">Name:</label>
+        </div>
+        <div class="col-5">
+          <input type="text" id="name-id" class="form-control" [(ngModel)]="name">
+        </div>
+      </div>
+      <div class="row mt-1 g-3 align-items-center">
+        <div class="col-1">
+          <label for="designation-id" class="col-form-label">Designation:</label>
+        </div>
+        <div class="col-5">
+          <input type="text" id="designation-id" class="form-control" [(ngModel)]="designation">
+        </div>
+      </div>
+      <div class="row mt-1 g-3 align-items-center">
+        <div class="col-1">
+          <label for="email-id" class="col-form-label">Email:</label>
+        </div>
+        <div class="col-5">
+          <input type="email" id="email-id" class="form-control" [(ngModel)]="email">
+        </div>
+      </div>
+  
+      <section class="mt-5">
+        <article><h3>Details</h3></article>
+        <article>Name : {{name}}</article>
+        <article>Designation: {{designation}}</article>
+        <article>Email: {{email}}</article>
+      </section>
+    </div>
+  </div> -->

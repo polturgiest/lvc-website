@@ -1,0 +1,18 @@
+<mat-form-field>
+    <mat-label>Select LVC Course</mat-label>
+    <mat-select [formControl]="course">
+        <mat-option 
+            *ngFor="let cs of courseList" 
+            [value]="cs.name" 
+            matTooltip="This is tooltip for {{cs.name}}"
+        >
+            {{cs.name}}
+        </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-chip-listbox aria-label="Fish selection">
+    <mat-chip-option *ngFor="let cs of courseList" >
+        {{cs.name}}
+    </mat-chip-option>
+  </mat-chip-listbox>
